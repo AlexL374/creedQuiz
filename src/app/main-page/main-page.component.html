@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <body>
+    <p class="not-popup" id="name">Creed Quiz</p>
+    <textarea class="not-popup" placeholder="I believe in..." rows="20" cols="100" id="submission"></textarea>
+    <br>
+    <button type="button" class="not-popup" name="submitButton" (click)="submit()">Submit</button>
+    <br>
+    <button type="button" class="not-popup" name="resetButton" (click)="reset()">Reset</button>
+    <!--<br>
+    <button type="button" class="not-popup" name="viewButton" (click)="showCreed()">View</button>-->
+    <div id="result">
+      <div id="result-content">
+        <span class="close" (click)="close()">&times;</span>
+        <p id="popup-text"></p>
+        <div id="compare-creed">
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
