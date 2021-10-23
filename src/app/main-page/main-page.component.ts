@@ -16,7 +16,7 @@ export class MainPageComponent implements OnInit {
     var correctCreed = "I believe in the Chi Phi Fraternity. From its triple origin, Chi Phi sets forth and maintains values that others in society have dared to compromise. Truth, Honor, and Personal Integrity are the foundations upon which Chi Phi is built. A man's word is his bond. Chivalrous behavior crosses the ages to touch the heart of Chi Phi. I believe in the friendship of Chi Phi. Whether on the road or in the Chapter house, the hand of Brotherhood is always extended. The strength obtained from the union of congenial minds is the backbone of the Fraternity. Our founders sought for nothing less. Finally, I believe in the future of the Chi Phi Fraternity because I believe in myself. When I put forth my best effort and combine that with the strength of my Brothers, we can achieve the victory of continual existence. As long as the Almighty permits, I will strive to better myself through the teachings of my Fraternity. Being a more aware citizen, a more able person, and a stronger Chi Phi shall be my reward.";
     var submission = (<HTMLTextAreaElement>document.getElementById("submission")).value;
     console.log(submission);
-    if (submission == correctCreed) {
+    if (submission.toUpperCase() == correctCreed.toUpperCase()) {
       (<HTMLElement>document.getElementById("popup-text")).innerHTML = "Right :)";
       (<HTMLElement>document.getElementById("popup-text")).style.color = "green";
       console.log("You got it right");
