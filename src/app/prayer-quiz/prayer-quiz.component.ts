@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-main-page',
-  templateUrl: './main-page.component.html',
-  styleUrls: ['./main-page.component.css']
+  selector: 'app-prayer-quiz',
+  templateUrl: './prayer-quiz.component.html',
+  styleUrls: ['./prayer-quiz.component.css']
 })
-export class MainPageComponent implements OnInit {
+export class PrayerQuizComponent implements OnInit {
 
   constructor() { }
 
@@ -13,7 +13,7 @@ export class MainPageComponent implements OnInit {
   }
 
   submit() {
-    var correctCreed = "I believe in the Chi Phi Fraternity. From its triple origin, Chi Phi sets forth and maintains values that others in society have dared to compromise. Truth, Honor, and Personal Integrity are the foundations upon which Chi Phi is built. A man's word is his bond. Chivalrous behavior crosses the ages to touch the heart of Chi Phi. I believe in the friendship of Chi Phi. Whether on the road or in the Chapter house, the hand of Brotherhood is always extended. The strength obtained from the union of congenial minds is the backbone of the Fraternity. Our founders sought for nothing less. Finally, I believe in the future of the Chi Phi Fraternity because I believe in myself. When I put forth my best effort and combine that with the strength of my Brothers, we can achieve the victory of continual existence. As long as the Almighty permits, I will strive to better myself through the teachings of my Fraternity. Being a more aware citizen, a more able person, and a stronger Chi Phi shall be my reward.";
+    var correctCreed = "Almighty Father, who dost vouchsafe to direct those who acknowledge Thee in all their ways, look, we beseech Thee, with favor upon our Fraternity. Make it a blessing and a benefit to all its members. Deliver us from those evils to which we may be at any time exposed. Grant us the light of Thy truth and the illumination of Thy spirit that we may always do that which is acceptable in Thy Sight. Unite us in the bonds of love. Keep us in charity with all mankind. Incline our hearts to walk humbly before Thee and help us so to acquit ourselves in this life that we may dwell with Thee in life everlasting. Amen.";
     var submission = (<HTMLTextAreaElement>document.getElementById("submission")).value.replace(/\n/g, '');
     console.log(submission);
     var testSubmission = submission.replace(/\s/g, '');
@@ -48,7 +48,7 @@ export class MainPageComponent implements OnInit {
           i = submission.length;
           break;
         }
-        else if (counter == 328 || counter == 586 || counter == 808) {
+        else if (counter == 606) {
           var break1 = (<HTMLElement>document.createElement('br'));
           correct_creed_div.appendChild(break1);
           var break2 = (<HTMLElement>document.createElement('br'));
@@ -68,7 +68,7 @@ export class MainPageComponent implements OnInit {
         letterSpan.style.color= "green";
       }
       letterSpan.style.fontSize = "20px";
-      if (counter == 328 || counter == 586 || counter == 808) {
+      if (counter == 606) {
         var break1 = (<HTMLElement>document.createElement('br'));
         correct_creed_div.appendChild(break1);
         var break2 = (<HTMLElement>document.createElement('br'));
@@ -83,7 +83,7 @@ export class MainPageComponent implements OnInit {
         letterSpan.innerHTML = correctCreed[counter];
         letterSpan.style.color = "red";
         letterSpan.style.fontSize = "20px";
-        if (counter == 328 || counter == 586 || counter == 808) {
+        if (counter == 606) {
           var break1 = (<HTMLElement>document.createElement('br'));
           correct_creed_div.appendChild(break1);
           var break2 = (<HTMLElement>document.createElement('br'));
@@ -105,11 +105,6 @@ export class MainPageComponent implements OnInit {
     (<HTMLTextAreaElement>document.getElementById("submission")).value = "";
   }
 
-  showCreed() {
-    console.log("Show Creed")
-
-  }
-
   close() {
     (<HTMLDivElement>document.getElementById("result")).style.display = "none";
     //(<HTMLDivElement>document.getElementById("result-content")).style.opacity = "0";
@@ -125,8 +120,8 @@ export class MainPageComponent implements OnInit {
     }
   }
 
-  prayerSwitch() {
-    window.location.href = "\prayer";
+  switchCreed() {
+    window.location.href="";
   }
 
 }
